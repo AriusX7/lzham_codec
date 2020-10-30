@@ -169,6 +169,8 @@
    // --- Generic GCC/clang path for x86/x64, clang or GCC, Linux, OSX, FreeBSD or NetBSD, pthreads for threading, GCC built-ins for atomic ops.
    #define LZHAM_PLATFORM_PC 1
 
+   #define __STDC_LIMIT_MACROS
+
    #if defined(_LP64) || defined(__LP64__) || defined(__x86_64__)
       // 64-bit build assumes pointers are always 64-bit
       #define LZHAM_PLATFORM_PC_X64 1
@@ -241,6 +243,7 @@ const bool c_lzham_big_endian_platform = !c_lzham_little_endian_platform;
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
+#include <stdint.h>
 #if !defined(__APPLE__) && !defined(__FreeBSD__)
 #include <malloc.h>
 #endif
