@@ -171,8 +171,6 @@
    
    #define __STDC_LIMIT_MACROS
 
-   #define __STDC_LIMIT_MACROS
-
    #if defined(_LP64) || defined(__LP64__) || defined(__x86_64__)
       // 64-bit build assumes pointers are always 64-bit
       #define LZHAM_PLATFORM_PC_X64 1
